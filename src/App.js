@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ProductList } from './components/ProductList';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Cart } from './components/Cart';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+  return <Container fluid>
+    <Row>
+      <Col xs={9}><ProductList /></Col>
+      <Col><Cart /></Col>
+    </Row>
+  </Container>
+
 }
 
 export default App;
